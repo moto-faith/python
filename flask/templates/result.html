@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>搜索结果</title>
+</head>
+<body>
+
+<div style="background: palegoldenrod; width: auto; height: inherit">
+
+<a href=”#” onClick="javascript :history.back(-1);"><font size="6">返回</font></a>
+    <h1 align="center"> 搜索结果:共<font color="red">{{ num }}</font>条数据  </h1>
+
+{%for i in data%}
+    <a href="{{ i['url'] }}" target="_blank" style="text-decoration: none"><font size="6"> {{ i['title'] }}</font></a></br>
+{% endfor %}
+</div>
+</body>
+</html>
