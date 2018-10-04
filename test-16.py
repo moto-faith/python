@@ -75,7 +75,7 @@ if __name__ == '__main__':
     pool = Pool()
     for i in range(1, 35):
         web = 'https://www.c5game.com/csgo/default/result.html?type={}&page={}'.format(type,i)
-        if str(requests.get(web)) == '<Response [200]>':
+        if requests.get(web).status_code == 200:
             print('正在查找第{}页'.format(i))
 
             pool.apply_async(html, args=(web,))
@@ -83,5 +83,3 @@ if __name__ == '__main__':
     pool.close()
     pool.join()
     print('已寻找结束,结果保存为 Buy.csv')
-
-
