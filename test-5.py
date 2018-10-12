@@ -141,6 +141,7 @@ def select(nums):
     else:
         chose['salary'] = ''
         print('您输入的金额错误,已默认为不限')
+    print('请稍等,正在获取信息...')
 
     url = 'http://www.lovewzly.com/api/user/pc/list/search?'+chose['age']+chose['gender']+chose['city']+chose['height']+chose['marry']+chose['education']+chose['salary']+'page='
     get_text(url,nums)
