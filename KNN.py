@@ -1,6 +1,7 @@
 import numpy as np
 from math import sqrt
 from collections import Counter
+from metrics import accuracy_score
 
 
 class KNNClassifier:
@@ -46,6 +47,9 @@ class KNNClassifier:
         votes = Counter(topK_y)
 
         return votes.most_common(1)[0][0]
+    def score(self,x_test,y_test):
+        y_predict = self.predict(x_test)
+        return accuracy_score(y_predict,y_test)
 
     def __repr__(self):
         return "KNN(k=%d)" % self.k
