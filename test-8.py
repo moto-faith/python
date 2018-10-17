@@ -37,4 +37,4 @@ if __name__ == '__main__':
     for i in range(11):
         test(i)
     time2=time.time()
-    print(str(time2-time1)+'s')
+    print(str(time2-time1)+'s') 
