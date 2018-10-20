@@ -7,7 +7,7 @@ from PIL import Image
 from lxml import etree
 
 cookie = {
-    'Cookie':'登录产生的cookie'
+    'Cookie':'登录产生的cookie'# 填入cookie
 }
 headers = {
     'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
